@@ -1,0 +1,50 @@
+## Visual Studio 2022
+
+cmd /
+path:
+cd "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE"
+
+reset:
+devenv /resetsettings
+
+more reset
+devenv /clearcache
+
+
+------------------------------------------------------------------------------------
+
+## SQL
+
+-- veritabanındaki tüm tabloların içindeki tüm verileri temizlemek için
+EXEC sp_MSforeachtable @command1="DELETE FROM ?"
+
+-- Tüm Tablo ve Diğer Veritabanı Nesnelerini Silme:
+EXEC sp_MSforeachtable @command1="DROP TABLE ?"
+EXEC sp_MSforeachtable @command1="DROP VIEW ?"
+EXEC sp_MSforeachtable @command1="DROP PROCEDURE ?"
+EXEC sp_MSforeachtable @command1="DROP FUNCTION ?"
+
+-- Belirli bir tabloyu resetlemek:
+Truncate table Users
+
+-- Sununun saatini öğrenmek için
+SELECT SYSDATETIMEOFFSET() AS ServerDateTimeOffset;
+
+
+------------------------------------------------------------------------------------
+
+## MAC
+
+Mac'te terminal kullanarak parola korumalı dosya sıkıştırma işlemi nasıl yapılır?
+
+- Terminalde ilgili dosya path ine girilir.
+
+- zip -e (sıkıştırılmış dosya adı) (orijinal dosya adı)
+
+- örnek: “example.txt” adındaki bir dosyayı sıkıştırmaya çalışıyorsan, komut şöyle olmalı: zip -e example.zip example.txt
+
+----
+
+Mac'te ZIP önizlemesi nasıl yapılır / Bir zipi açmadan içeriğini kontrol edebilirsiniz (içinde ne var?):
+
+“zipinfo (File Name)” yazıp enter: dosya adlarını ve boyutlarını gösterir.
