@@ -40,6 +40,7 @@ Mac'te terminal kullanarak parola korumalı dosya sıkıştırma işlemi nasıl 
 - Terminalde ilgili dosya path ine girilir.
 
 - zip -e (sıkıştırılmış dosya adı) (orijinal dosya adı)
+- zip -0 -er Arsiv.zip N Klasör ise de böyle
 
 - örnek: “example.txt” adındaki bir dosyayı sıkıştırmaya çalışıyorsan, komut şöyle olmalı: zip -e example.zip example.txt
 
